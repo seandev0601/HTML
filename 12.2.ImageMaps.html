@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+p { color: gray; font-size:18px;}
+pre	{ color: gray; font-size:18px;}
+h1 {
+  color: black;
+} 
+code { color: red;
+}
+strong { color: red;
+}
+
+</style>
+<body>
+
+<h1><b>mage Maps</b></h1>
+<pre>The HTML <code>&lt;map&gt;</code> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <code>&lt;area&gt;</code> tags.
+
+Try to click on the computer, phone, or the cup of coffee in the image below:</pre>
+
+<h1>Setp 1.The Image</h1>
+<pre>The image is inserted using the <code>&lt;img&gt;</code> tag. The only difference from other images is that you must add a usemap attribute:
+
+The usemap value starts with a hash tag # followed by the name of the image map, and is used to create a relationship between the image and the image map.</pre>
+
+<h1>Setp 2.Create Image Map</h1>
+<pre>Then, add a <code>&lt;map&gt;</code> element.
+
+The <code>&lt;map&gt;</code> element is used to create an image map, and is linked to the image by using the required name attribute:</pre>
+
+<h1>Setp 3.The Areas</h1>
+<pre>Then, add the clickable areas.
+
+A clickable area is defined using an <code>&lt;area&gt;</code> element.
+
+Shape
+You must define the shape of the clickable area, and you can choose one of these values:
+
+<strong>rect</strong> - defines a rectangular region
+<strong>circle</strong> - defines a circular region
+<strong>poly</strong> - defines a polygonal region
+<strong>default</strong> - defines the entire region
+You must also define some coordinates to be able to place the clickable area onto the image. </pre>
+
+
+<img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#jsmap">
+
+<map name="jsmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com/html/computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/html/phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="https://www.w3schools.com/html/coffee.htm">
+</map>
+
+<hr>
+
+<h1><b>Image Map and JavaScript</b></h1>
+<pre>A clickable area can also trigger a JavaScript function.
+
+Add a click event to the <code>&lt;area&gt;</code> element to execute a JavaScript function:</pre>
+
+
+<img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#jsmap">
+
+<map name="jsmap">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="Coffee" href="https://www.w3schools.com/html/coffee.htm" onclick="myFunction()">
+</map>
+
+<script>
+function myFunction() {
+  alert("You clicked the coffee cup!");
+ }
+</script>
+
+<h1>Chapter Summary<h1>
+<pre>Use the HTML <code>&lt;map&gt;</code> element to define an image map
+Use the HTML <code>&lt;area&gt;</code> element to define the clickable areas in the image map
+Use the HTML usemap attribute of the <code>&lt;img&gt;</code> element to point to an image map</pre>
+
+
+
+<hr>
+<a href="https://www.w3schools.com/html/html_images_imagemap.asp">w3schools HTML Image Maps</a>
+
+</body>
+</html>
+
+
