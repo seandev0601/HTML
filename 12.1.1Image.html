@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+p { color: gray; font-size:18px;}
+pre	{ color: gray; font-size:18px;}
+h1 {
+  color: black;
+} 
+code { color: red;
+}
+strong { color: red;
+}
+
+img {width: 50%;}
+</style>
+<body>
+
+<h1><b>HTML Images Syntax</b></h1>
+<pre>The HTML <code>&lt;img&gt;</code> tag is used to embed an image in a web page.
+
+Images are not technically inserted into a web page; images are linked to web pages. The <code>&lt;img&gt;</code> tag creates a holding space for the referenced image.
+
+The <code>&lt;img&gt;</code> tag is empty, it contains attributes only, and does not have a closing tag.
+
+The <code>&lt;img&gt;</code> tag has two required attributes:
+
+src - Specifies the path to the image
+alt - Specifies an alternate text for the image
+</pre>
+
+<img src="url" alt="alternatetext">
+
+<h1><b>The src Attribute</b></h1>
+<pre>The required <strong>src</strong> attribute specifies the path (URL) to the image.
+
+Note: When a web page loads, it is the browser, at that moment, that gets the image from a web server and inserts it into the page. Therefore, make sure that the image actually stays in the same spot in relation to the web page, otherwise your visitors will get a broken link icon. The broken link icon and the alt text are shown if the browser cannot find the image.</pre>
+
+<h1><b>The alt Attribute</b></h1>
+<pre>The required <strong>alt</strong> attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
+
+The value of the <strong>alt</strong> attribute should describe the image:
+
+If a browser cannot find an image, it will display the value of the alt attribute:</pre>
+
+<img src="https://www.w3schools.com/html/img_chania.jpg" alt="Flowers in Chania">
+
+
+<hr>
+
+<h1><b>Image Size - Width and Height</b></h1>
+<p>You can use the style attribute to specify the width and height of an image.</p>
+
+<img src="https://www.w3schools.com/html/img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+
+<p>Alternatively, you can use the width and height attributes:</p>
+<img src="https://www.w3schools.com/html/img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
+<hr>
+
+
+<h2>Width/Height Attributes or Style?</h2>
+
+<p>The first image uses the width attribute (set to 128 pixels), but the style in the head section overrides it, and sets the width to 100%.</p>
+
+<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+
+<p>The second image uses the style attribute to set the width to 128 pixels, this will not be overridden by the style in the head section:</p>
+
+<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+<hr>
+
+<h1><b>Images in Another Folder</b></h1>
+<p>If you have your images in a sub-folder, you must include the folder name in the <strong>src</strong> attribute:</p>
+
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+
+<hr>
+
+<h1><b>Images on Another Server/Website</b></h1>
+<pre>Some web sites point to an image on another server.
+
+To point to an image on another server, you must specify an absolute (full) URL in the <strong>src</strong> attribute:</pre>
+
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+
+<hr>
+
+<h1><b>Animated Images</b></h1>
+<p>HTML allows animated GIFs:<p>
+<img src="https://www.w3schools.com/html/programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+
+<hr>
+
+<h1><b>Image as a Link</b></h1>
+<p>o use an image as a link, put the <code>&lt;img&gt;</code> tag inside the <code>&lt;a&gt;</code> tag:<code>&lt;p&gt;</code>
+<br>
+<a href="default.asp">
+  <img src="https://www.w3schools.com/html/smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+<hr>
+
+<h1><b>Image Floating</b></h1>
+<p>Use the CSS <strong>float</strong> property to let the image float to the right or to the left of a text:</p>
+
+<p><img src="https://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+The image will float to the right of the text.</p>
+
+<p><img src="https://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+The image will float to the left of the text.</p>
+<hr>
+
+<h2>Common Image Formats</h2>
+<p>Here are the most common image file types, which are supported in all browsers 
+(Chrome, Edge, Firefox, Safari, Opera):</p>
+<table>
+<tr>
+<th>Abbreviation</th>
+<th>File Format</th>
+<th>File Extension</th>
+</tr>
+<tr>
+<td>APNG</td>
+<td>Animated Portable Network Graphics</td>
+<td>.apng</td>
+</tr>
+<tr>
+<td>GIF</td>
+<td>Graphics Interchange Format</td>
+<td>.gif</td>
+</tr>
+<tr>
+<td>ICO</td>
+<td>Microsoft Icon</td>
+<td>.ico, .cur </td>
+</tr>
+<tr>
+<td>JPEG</td>
+<td>Joint Photographic Expert Group image</td>
+<td>.jpg, .jpeg, .jfif, .pjpeg, .pjp</td>
+</tr>
+<tr>
+<td>PNG</td>
+<td>Portable Network Graphics</td>
+<td>.png</td>
+</tr>
+<tr>
+<td>SVG</td>
+<td>Scalable Vector Graphics</td>
+<td>.svg</td>
+</tr>
+</table>
+<hr>
+
+<h2>Chapter Summary</h2>
+<ul>
+  <li>Use the HTML <code class="w3-codespan">&lt;img&gt;</code> element to define an image</li>
+  <li>Use the HTML <code class="w3-codespan">src</code> attribute to define the URL of the image</li>
+  <li>Use the HTML <code class="w3-codespan">alt</code> attribute to define an alternate text for an image, if it cannot be displayed</li>
+  <li>Use the HTML <code class="w3-codespan">width</code> and <code class="w3-codespan">height</code> attributes 
+  or the CSS <code class="w3-codespan">width</code> and <code class="w3-codespan">height</code> 
+  properties to define the size of the image</li>
+  <li>Use the CSS <code class="w3-codespan">float</code> property to let the image float 
+  to the left or to the right</li>
+</ul>
+<div class="w3-panel w3-note">
+  <p><strong>Note:</strong> Loading large images takes time, and can slow down your 
+  web page. Use images carefully.</p>
+</div>
+
+
+<hr>
+<a href="https://www.w3schools.com/html/html_images.asp">w3schools HTML Images</a>
+
+</body>
+</html>
+
+
