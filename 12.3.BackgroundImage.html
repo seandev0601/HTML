@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+body {
+  background-image: url('https://www.w3schools.com/html/img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+p { color: black; font-size:18px;background-image: url('https://www.w3schools.com/html/img_girl.jpg');}
+pre	{ color: black; font-size:18px;}
+h1 {
+  color: black;
+} 
+code { color: red;background-color: yellow;
+}
+strong { color: red;background-color: yellow;
+}
+
+</style>
+<body>
+
+<h1><b>Background Image on a HTML element</b></h1>
+<pre>To add a background image on an HTML element, use the HTML <strong>style</strong> attribute and the CSS <strong>background-image</strong> property:</pre>
+
+<p style="background-image: url('https://www.w3schools.com/html/img_girl.jpg');">
+You can specify background images<br>
+for any visible HTML element.<br>
+In this example, the background image<br>
+is specified for a p element.<br>
+By default, the background-image<br>
+will repeat itself in the direction(s)<br>
+where it is smaller than the element<br>
+where it is specified. (Try resizing the<br>
+browser window to see how the<br>
+background image behaves.
+</p>
+
+<hr>
+
+<h1><b>Background Image on a Page</b></h1>
+<pre>If you want the entire page to have a background image, you must specify the background image on the <code>&lt;body&gt;</code> element:</pre>
+
+<pre>You can also specify the background image in the <code>&lt;style&gt;</code> element, in the <code>&lt;head&gt;</code> section:</pre>
+
+<p>You can specify background images<br>
+for any visible HTML element.<br>
+In this example, the background image<br>
+is specified for a div element.<br>
+By default, the background-image<br>
+will repeat itself in the direction(s)<br>
+where it is smaller than the element<br>
+where it is specified. (Try resizing the<br>
+browser window to see how the<br>
+background image behaves.</p>
+
+<hr>
+<pre>Background Repeat
+If the background image is smaller than the element, the image will repeat itself, horizontally and vertically, until it reaches the end of the element:</pre>
+
+<hr>
+
+<pre>To avoid the background image from repeating itself, set the <strong>background-repeat</strong> property to <strong>no-repeat</strong>.</pre>
+
+<code>background-repeat: no-repeat;<code>
+
+<hr>
+
+<h1>Background Cover</h1>
+<pre>If you want the background image to cover the entire element, you can set the <strong>background-size</strong> property to <strong>cover</strong>.
+
+Also, to make sure the entire element is always covered, set the <strong>background-attachment</strong> property to <strong>fixed</strong>:
+
+This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions):</pre>
+<hr>
+
+<h1>Background Stretch</h1>
+<pre>If you want the background image to stretch to fit the entire element, you can set the <strong>background-size</strong> property to <strong>100% 100%</strong>:</pre>
+
+
+<hr>
+<a href="https://www.w3schools.com/html/html_images_background.asp">w3schools HTML Background Image</a>
+
+</body>
+</html>
+
+
