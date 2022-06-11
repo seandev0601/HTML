@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p { color: gray; font-size:18px;}
+pre { color: gray; font-size:18px;}
+h1 {
+  color: black;
+} 
+code { color: red;
+}
+strong { color: red; }
+table, th, td {
+border:1px solid black;
+}
+th, td {
+  padding: 5px;
+}
+
+
+.blackbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.blackbar li {
+  float: left;
+}
+
+.blackbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.blackbar li a:hover {
+  background-color: #111111;
+} 
+
+</style>
+
+  <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico">
+</head>
+<body>
+
+<h1>HTML Ordered Lists</h1>
+
+<p>The HTML <code>&lt;ol&gt;</code> tag defines an order list. An ordered list can be numerical or alphabetical.</p>
+
+<h1>Ordered HTML List</h1>
+<pre>
+An ordered list starts with the <code>&lt;ol&gt;</code> tag. Each list item starts with the <code>&lt;ol&gt;</code> tag.
+
+The list items will be marked with numbers by default:
+</pre>
+
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<hr>
+
+<h1>Ordered HTML List - The Type Attribute</h1>
+<pre>
+The <strong>type</strong> attribute of the <code>&lt;ol&gt;</code> tag, defines the type of the list item marker:
+</pre>
+
+<table style="width:80%">
+  <tr>
+    <th style="text-align: left;">Tag</th>
+    <th style="text-align: left;">Description</th>
+  </tr>
+  <tr>
+    <td>type="1"</td>
+    <td>The list items will be numbered with numbers (default)</td>
+  </tr>
+  <tr>
+    <td>type="A"</td>
+    <td>The list items will be numbered with uppercase letters</td>
+  </tr>
+  <tr>
+    <td>type="a"</td>
+    <td>The list items will be numbered with lowercase letters</td>
+  </tr>
+  <tr>
+    <td>type="I"</td>
+    <td>The list items will be numbered with uppercase roman numbers</td>
+  </tr>
+  <tr>
+    <td>type="i"</td>
+    <td>The list items will be numbered with lowercase roman numbers</td>
+  </tr>
+</table>
+
+<ol type="1">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<ol type="A">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<ol type="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<ol type="I">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<ol type="i">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<hr>
+
+<h1>Control List Counting</h1>
+<pre>
+By default, an ordered list will start counting from 1. If you want to start counting from a specified number, you can use the <strong>start</strong> attribute:
+</pre>
+
+<ol start="50">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<hr>
+
+<h1>Nested HTML Lists</h1>
+<pre>
+Lists can be nested (list inside list):
+</pre>
+
+<ol>
+  <li>Coffee</li>
+  <li>Tea
+    <ol>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ol>
+  </li>
+  <li>Milk</li>
+</ol>
+
+<hr>
+
+<h1>Chapter Summary</h1>
+
+<ul>
+  <li>Use the HTML <code>&lt;ol&gt;</code> element to define an ordered list</li>
+  <li>Use the CSS <strong>type</strong> attribute to define the numbering type</li>
+  <li>Use the HTML <code>&lt;li&gt;</code> element to define a list item</li>
+  <li>List can be nested</li>
+  <li>List items can contain other HTML elements</li>
+</ul>
+
+<hr>
+
+<a href="https://www.w3schools.com/html/html_list_ordered.asp">w3schools HTML List Ordered</a>
+
+</body>
+</html>
+
+
