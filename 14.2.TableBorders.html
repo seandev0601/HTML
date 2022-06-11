@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p { color: gray; font-size:18px;}
+pre	{ color: gray; font-size:18px;}
+h1 {
+  color: black;
+} 
+code { color: red;
+}
+strong { color: red; }
+table, th, td {
+border:1px solid black;
+}
+<
+</style>
+
+  <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico">
+</head>
+<body>
+
+<h1>HTML Table Borders</h1>
+
+<p>HTML tables can have borders of different styles and shapes.</p>
+
+<h1>How To Add a Border</h1>
+<p>When you add a border to a table, you also add borders around each table cell:</p>
+
+<p>To add a border, use the CSS border property on <strong>table</strong>, <strong>th</strong>, and <strong>td</strong> elements:</p>
+
+<pre style="color:red;">table, th, td {
+  border: 1px solid black;
+}</pre>
+
+<h1>Collapsed Table Borders</h1>
+<pre>To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.
+
+This will make the borders collapse into a single border:</pre>
+
+
+<pre style="color:red;">table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}</pre>
+
+<hr>
+<h1>Style Table Borders</h1>
+<pre>If you set a background color of each cell, and give the border a white color (the same as the document background), you get the impression of an invisible border:</pre>
+
+<pre style="color:red;">table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}</pre>
+
+<table style="background-color: #96D4D4;border-collapse: collapse;width:80%;">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+
+<hr>
+
+<h1>Round Table Borders</h1>
+<pre>With the <strong>border-radius</strong> property, the borders get rounded corners:</pre>
+
+<pre style="color:red;">table, th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}</pre>
+
+<table style="border-radius: 10px;width:80%;">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+<hr>
+
+<h1>Dotted Table Borders</h1>
+<pre>With the border-style property, you can set the appereance of the border.</pre>
+
+<pre>The following values are allowed:
+<ul>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">dotted</code></span> <span style="xborder:2px solid black;border-style:dotted">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">dashed</code></span> <span style="xborder:2px solid black;border-style:dashed">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">solid</code></span> <span style="xborder:2px solid black;border-style:solid">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">double</code></span> <span style="xborder:2px solid black;border-style:double">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">groove</code></span> <span style="xborder:2px solid black;border-style:groove">&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">ridge</code></span> <span style="xborder:2px solid black;border-style:ridge">&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">inset</code></span> <span style="xborder:2px solid black;border-style:inset">&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">outset</code></span> <span style="xborder:2px solid black;border-style:outset">&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">none</code></span> <span style="xborder:2px solid black;border-style:none">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+<li><span style="display:inline-block;width:70px;"><code class="w3-codespan">hidden</code></span> <span style="xborder:2px solid black;border-style:hidden">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+</ul>
+</pre>
+
+<hr>
+
+<h1>Border Color</h1>
+<pre>With the border-color property, you can set the color of the border.</pre>
+
+<pre style="color:red;"> th, td {
+  border-color: #96D4D4;
+}</pre>
+
+<table style="width:80%;border-color: #96D4D4;">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+
+<hr>
+<a href="https://www.w3schools.com/html/html_table_borders.asp">w3schools HTML Table Broders</a>
+
+</body>
+</html>
+
+
