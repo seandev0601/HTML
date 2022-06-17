@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Leaning Page Title</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/html/" target="_blank">
+<style>
+p { color: gray; font-size:18px;}
+pre { color: gray; font-size:18px;}
+h1 {
+  color: black;
+} 
+code { color: red;
+}
+strong { color: red; }
+table, th, td {
+border:1px solid black;
+}
+th, td {
+  padding: 5px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+</style>
+
+  <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico">
+</head>
+<body>
+
+<h1>HTML Forms</h1>
+
+<pre>
+An HTML form is used to collect user input. The user input is most often sent to a server for processing.
+</pre>
+
+<h1>The <code>&lt;form&gt;</code> Element</h1>
+<pre>
+The HTML <code>&lt;form&gt;</code> elements is used to create an HTML form for user inpute:
+</pre>
+
+<pre style="color:blue">
+&lt;form&gt;
+.
+form elements
+.
+&lt;/form&gt;
+</pre>
+
+<pre>
+The &lt;form&gt; element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
+
+All the different form elements are covered in this chapter: HTML Form Elements.
+</pre>
+
+<hr>
+
+<h1>The <code>&lt;input&gt;</code> Element</h1>
+<pre>
+The HTML <code>&lt;input&gt;</code> element is the most used form element.
+
+An <code>&lt;input&gt;</code> element can be displayed in many ways, depending on the type attribute.
+
+Here are some examples:
+</pre>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>&lt;input type=&quot;text&quot;&gt;</td>
+    <td>Displays a single-line text input field</td>
+  </tr>
+  <tr>
+    <td>&lt;input type=&quot;radio&quot;&gt;</td>
+    <td>Displays a radio button (for selecting one of many choices)</td>
+  </tr>
+  <tr>
+    <td>&lt;input type=&quot;checkbox&quot;&gt;</td>
+    <td>Displays a checkbox (for selecting zero or more of many choices)</td>
+  </tr>
+  <tr>
+    <td>&lt;input type=&quot;submit&quot;&gt;</td>
+    <td>Displays a submit button (for submitting the form)</td>
+  </tr>
+  <tr>
+    <td>&lt;input type=&quot;button&quot;&gt;</td>
+    <td>Displays a clickable button</td>
+  </tr>
+</table>
+
+<hr>
+
+<h1>Text Field</h1>
+<pre>
+The <code>&lt;input type="text"&gt;</code> defines a single-line input field for text input.
+</pre>
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+<hr>
+
+
+<h1>The <code>&lt;label&gt;</code> Element</h1>
+<pre>
+Notice the use of the <code>&lt;label&gt;</code> element in the example above.
+
+The <code>&lt;label&gt;</code> tag defines a label for many form elements.
+
+The <code>&lt;label&gt;</code> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+
+The <code>&lt;label&gt;</code> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <code>&lt;label&gt;</code> element, it toggles the radio button/checkbox.
+
+The for attribute of the <code>&lt;label&gt;</code> tag should be equal to the id attribute of the <code>&lt;input&gt;</code> element to bind them together.
+</pre>
+
+<hr>
+
+
+<h1>Radio Buttons</h1>
+<pre>
+The <code>&lt;input type="radio"&gt;</code> defines a radio button.
+
+Radio buttons let a user select ONE of a limited number of choices.
+</pre>
+
+<p>Choose your favorite Web language:</p>
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+
+<hr>
+
+
+<h1>Checkboxes</h1>
+<pre>
+The <code>&lt;input type="checkbox"&gt;</code> defines a <b>checkbox</b>.
+
+Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+</pre>
+
+<p>Choose your tool:</p>
+
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+</form>
+
+<hr>
+
+
+<h1>The Submit Button</h1>
+
+<pre>
+The <code>&lt;input type="submit"&gt;</code> defines a button for submitting the form data to a form-handler.
+
+The form-handler is typically a file on the server with a script for processing input data.
+
+The form-handler is specified in the form's action attribute.
+</pre>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<hr>
+
+
+<h1>The Name Attribute for <code>&lt;input&gt;</code></h1>
+<pre>
+Notice that each input field must have a <strong>name</strong> attribute to be submitted.
+
+If the <strong>name</strong> attribute is omitted, the value of the input field will not be sent at all.
+</pre>
+
+<hr>
+
+<a href="https://www.w3schools.com/html/html_forms.asp">w3schools HTML Forms</a>
+
+</body>
+</html>
+
+
