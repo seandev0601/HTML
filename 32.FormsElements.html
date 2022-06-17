@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Leaning Page Title</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/html/" target="_blank">
+<style>
+p { color: gray; font-size:18px;}
+pre { color: gray; font-size:18px;}
+h1 {
+  color: black;
+} 
+code { color: red;
+}
+strong { color: red; }
+table, th, td {
+border:1px solid black;
+}
+th, td {
+  padding: 5px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+</style>
+
+  <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico">
+</head>
+<body>
+
+<h1>HTML Form Elements</h1>
+
+<pre>
+This chapter describes all the different HTML form elements.
+</pre>
+
+<h1>The HTML <code>&lt;form&gt;</code> Elements</h1>
+<pre>
+The HTML <code>&lt;form&gt;</code>element can contain one or more of the following form elements:
+</pre>
+
+<ul>
+  <li> <code class="w3-codespan">&lt;input&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;label&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;select&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;textarea&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;button&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;fieldset&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;legend&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;datalist&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;output&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;option&gt;</code></li>
+  <li> <code class="w3-codespan">&lt;optgroup&gt;</code></li>
+</ul>
+
+<hr>
+
+<hr>
+
+<h1>The <code>&lt;input&gt;</code> Element</h1>
+<pre>
+One of the most used form element is the <code>&lt;input&gt;</code> element.
+
+The <code>&lt;input&gt;</code> element can be displayed in several ways, depending on the <strong>type</strong> attribute.
+</pre>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<hr>
+
+<h1>The <code>&lt;label&gt;</code> Element</h1>
+<pre>
+The <code>&lt;label&gt;</code> element defines a label for several form elements.
+
+The <code>&lt;label&gt;</code> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+
+The <code>&lt;label&gt;</code> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <code>&lt;label&gt;</code> element, it toggles the radio button/checkbox.
+
+The for attribute of the <code>&lt;label&gt;</code> tag should be equal to the id attribute of the <code>&lt;label&gt;</code> element to bind them together.
+</pre>
+
+
+<hr>
+
+<h1>The <code>&lt;select&gt;</code> Element</h1>
+<pre>
+The <code>&lt;select&gt;</code> element defines a drop-down list:
+</pre>
+
+<p>The select element defines a drop-down list:</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo" selected="">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+<h2>Visible Values:</h2>
+
+<p>Use the size attribute to specify the number of visible values:</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="3">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+
+<h2>Allow Multiple Selections:</h2>
+<p>Use the multiple attribute to allow the user to select more than one value:</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+
+<hr>
+
+
+<h1>The <code>&lt;textarea&gt;</code> Element</h1>
+<pre>
+The <code>&lt;textarea&gt;</code> Element defines a mutil-line input field (a text area):
+
+
+The <strong>rows</strong> attribute specifies the visible number of lines in a text area.
+
+The <strong>cols</strong> attribute specifies the visible width of a text area.
+</pre>
+
+<form action="/action_page.php">
+  <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+  <br><br>
+  <input type="submit">
+</form>
+
+
+<p>You can also define the size of the text area by using CSS:</p>
+<form action="/action_page.php">
+  <textarea name="message" style="width:200px; height:200px;">The cat was playing in the garden.</textarea>
+  <br><br>
+  <input type="submit">
+</form>
+
+<hr>
+
+<h1>The <code>&lt;button&gt;</code> Element</h1>
+<p>The <code>&lt;button&gt;</code> element defines a clickable button:</p>
+
+
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+
+<hr>
+
+
+<h1>The <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> Elements</h1>
+<pre>
+The <code>&lt;fieldset&gt;</code> element is used to group related data in a form.
+
+The <code>&lt;legend&gt;</code> element defines a caption for the <code>&lt;fieldset&gt;</code> element.
+</pre>
+
+<p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the fieldset element.</p>
+
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+<hr>
+
+<h1>The <code>&lt;datalist&gt;</code> Elements</h1>
+<pre>
+The <code>&lt;datalist&gt;</code> element specifies a list of pre-defined options for an <code>&lt;input&gt;</code> element.
+
+Users will see a drop-down list of the pre-defined options as they input data.
+
+The list attribute of the <code>&lt;input&gt;</code> element, must refer to the id attribute of the <code>&lt;datalist&gt;</code> element.
+</pre>
+
+<p>The datalist element specifies a list of pre-defined options for an input element.</p>
+
+<form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+
+<p><b>Note:</b> The datalist tag is not supported in Safari prior version 12.1.</p>
+
+<hr>
+
+<h1>The <code>&lt;output&gt;</code> Element</h1>
+<p>The <code>&lt;output&gt;</code> element represents the result of a calculation (like one performed by a script).</p>
+
+
+<p>The output element represents the result of a calculation.</p>
+
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
+<p><strong>Note:</strong> The output element is not supported in Edge prior version 13.</p>
+
+<hr>
+
+<table class="ws-table-all notranslate">
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><a href="/tags/tag_form.asp">&lt;form&gt;</a></td>
+<td> Defines an HTML form for user input</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_input.asp">&lt;input&gt;</a></td>
+<td>Defines an input control</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_textarea.asp">&lt;textarea&gt;</a></td>
+<td>Defines a multiline input control (text area)</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_label.asp">&lt;label&gt;</a></td>
+<td>Defines a label for an &lt;input&gt; element</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_fieldset.asp">&lt;fieldset&gt;</a></td>
+<td>Groups related elements in a form</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_legend.asp">&lt;legend&gt;</a></td>
+<td>Defines a caption for a &lt;fieldset&gt; element</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_select.asp">&lt;select&gt;</a></td>
+<td>Defines a drop-down list</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_optgroup.asp">&lt;optgroup&gt;</a></td>
+<td>Defines a group of related options in a drop-down list</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_option.asp">&lt;option&gt;</a></td>
+<td>Defines an option in a drop-down list</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_button.asp">&lt;button&gt;</a></td>
+<td>Defines a clickable button</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_datalist.asp">&lt;datalist&gt;</a></td>
+<td>Specifies a list of pre-defined options for input controls</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_output.asp">&lt;output&gt;</a></td>
+<td>Defines the result of a calculation</td>
+</tr>
+</table>
+
+<hr>
+
+<a href="https://www.w3schools.com/html/html_forms_elements.asp">w3schools HTML Form Elements</a>
+
+</body>
+</html>
