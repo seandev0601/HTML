@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Leaning Page Title</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/html/" target="_blank">
+<style>
+p { color: gray; font-size:18px;}
+pre { color: gray; font-size:18px;}
+h1 {
+  color: black;
+} 
+code { color: red;
+}
+strong { color: red; }
+table, th, td {
+border:1px solid black;
+}
+th, td {
+  padding: 5px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+</style>
+
+  <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico">
+</head>
+<body>
+
+<h1>HTML Plug-ins</h1>
+
+<pre>
+Plug-ins are computer programs that extend the standard functionality of the browser.
+</pre>
+
+<h2>Plug-ins</h2>
+<p>Plug-ins were designed to be used for many different purposes:
+<ul>
+<li>To run Java applets</li>
+<li>To run Microsoft ActiveX controls</li>
+<li>To display Flash movies</li>
+<li>To display maps</li>
+<li>To scan for viruses</li> 
+<li>To verify a bank id</li>
+</ul>
+<div class="w3-panel w3-warning">
+<p><b>Warning !</b></p>
+<p>Most browsers no longer support Java Applets and Plug-ins.</p>
+<p>ActiveX controls are no longer supported in any browsers.</p>
+<p>The support for Shockwave Flash has also been turned off in modern browsers.</p>
+</div>
+
+<hr>
+<h2>The &lt;object&gt; Element</h2>
+<p>The <code class="w3-codespan">&lt;object&gt;</code> element is supported by all browsers.</p>
+<p>The <code class="w3-codespan">&lt;object&gt;</code> element defines an embedded object within an HTML document.</p>
+<p>It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages,
+but can also be used to include HTML in HTML:</p>
+
+<object width="100%" height="500px" data="snippet.html"></object>
+
+<p>Or images if you like:</p>
+
+<object data="audi.jpeg"></object>
+
+<hr>
+
+<h2>The &lt;embed&gt; Element</h2>
+
+<p>The <code class="w3-codespan">&lt;embed&gt;</code> element is supported in all major browsers.</p>
+<p>The <code class="w3-codespan">&lt;embed&gt;</code> element also defines an embedded object within an HTML document.</p>
+<p>Web browsers have supported the &lt;embed&gt; element for a 
+long time. However, it has not been a part of the HTML  
+specification before HTML5.</p>
+
+<embed src="audi.jpeg">
+
+<p>The <code class="w3-codespan">&lt;embed&gt;</code> element can also be used to include HTML in HTML:</p>
+
+<embed width="100%" height="500px" src="snippet.html">
+
+
+<hr>
+
+<a href="https://www.w3schools.com/html/html_object.asp">w3schools HTML Plug-ins</a>
+
+</body>
+</html>
