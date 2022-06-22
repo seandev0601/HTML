@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Leaning Page Title</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/html/" target="_blank">
+<style>
+p { color: gray; font-size:18px;}
+pre { color: gray; font-size:18px;}
+h1 {
+  color: black;
+} 
+code { color: red;
+}
+strong { color: red; }
+table, th, td {
+border:1px solid black;
+}
+th, td {
+  padding: 5px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+</style>
+
+  <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico">
+</head>
+<body>
+
+<h1>HTML Audio</h1>
+
+<pre>
+This HTML <code>&lt;audio&gt;</code> element is used to play an audio file on a web page.
+</pre>
+
+<h1>The HTML <code>&lt;audio&gt;</code> element</h1>
+<pre>
+To play a audio file in HTML, use the HTML <code>&lt;audio&gt;</code> element:
+</pre>
+
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>     
+
+<hr>
+
+<h1>How it Works</h1>
+<pre>
+The controls attribute adds audio controls, like play, pause, and volume.
+
+The &lt;source&gt; element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+
+The text between the &lt;audio&gt; and &lt;/audio&gt; tags will only be displayed in browsers that do not support the &lt;audio&gt; element.
+</pre>
+
+<h2>HTML &lt;audio&gt; Autoplay</h2>
+<p>To start an audio automatically, use the autoplay attribute:</p>
+<audio controls autoplay>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<p>Add muted after autoplay to let your audio file start playing automatically (but muted):</p>
+
+<audio controls autoplay muted>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<hr>
+
+<h2>HTML Audio Formats</h2>
+<p>There are three supported audio formats: MP3, WAV, and Ogg. The browser support for the different formats is:</p>
+<table class="ws-table-all notranslate">
+<tr>
+<th style="width:25%">Browser</th>
+<th style="width:25%">MP3</th>
+<th style="width:25%">WAV</th>
+<th style="width:25%">Ogg</th>
+</tr>
+<tr>
+<td>Edge</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>YES</td>
+<td>YES</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+</table>
+<hr>
+
+<h2>HTML Audio - Media Types</h2>
+<table class="ws-table-all notranslate" id="table1">
+<tr>
+<th style="width:50%">File Format</th>
+<th style="width:50%">Media Type</th>
+</tr>
+<tr>
+<td>MP3</td>
+<td>audio/mpeg</td>
+</tr>
+<tr>
+<td>WAV</td>
+<td>audio/wav</td>
+</tr>
+<tr>
+<td>Ogg</td>
+<td>audio/ogg</td>
+</tr>
+</table>
+<hr>
+
+<h2>HTML Video - Methods, Properties, and Events</h2>
+<pre>The HTML DOM defines methods, properties, and events for the &lt;audio&gt; element.
+
+This allows you to load, play, and pause audios, as well as set duration and volume.
+
+There are also DOM events that can notify you when an audio begins to play, is paused, etc.</pre>
+
+<hr>
+
+<h2>HTML Audio Tags</h2>
+<table class="ws-table-all notranslate">
+<tr>
+<th style="width:20%">Tag</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><a href="/tags/tag_audio.asp">&lt;audio&gt;</a></td>
+<td>Defines sound content</td>
+</tr>
+<tr>
+<td><a href="/tags/tag_source.asp">&lt;source&gt;</a></td>
+<td>Defines multiple media resources for media elements, such as &lt;video&gt; and &lt;audio&gt;</td>
+</tr>
+</table>
+
+<hr>
+
+
+<a href="https://www.w3schools.com/html/html5_audio.asp">w3schools HTML Audio</a>
+
+</body>
+</html>
