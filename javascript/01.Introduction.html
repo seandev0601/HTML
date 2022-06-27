@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaning HTML</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="HTML tutorials">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/js/" target="_blank">
+  <style>
+    p { color: gray; font-size:18px;}
+    pre { color: gray; font-size:18px;}
+    h1 {
+      color: black;
+    } 
+    code { color: red;
+    }
+    strong { color: red; }
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+      padding: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+  </style>
+
+  <!-- <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico"> -->
+</head>
+<body>
+
+  <h1>JavaScript Introduction</h1>
+  <h2>Javascript Can Change HTML Content</h2>
+  <pre>
+    One of many JavaScript HTML methods is getElementById().
+
+    The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":
+  </pre>
+
+  <h3 id="demo">JavaScript can change HTML content.</h3>
+
+  <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+
+  <hr>
+  <h2>Javascript Can Change HTML Attribute Values</h2>
+  <pre>In this example JavaScript changes the value of the src (source) attribute of an <img> tag:
+  </pre>
+
+  <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+  <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+  <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+  <hr>
+  <h2>Javascript Can Change HTML Styles (CSS)</h2>
+  <p>Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+
+  <h3 id="demo2">JavaScript can change the style of an HTML element.</h3>
+
+  <button type="button" onclick="document.getElementById('demo2').style.fontSize='35px'">Click Me!</button>
+
+  <hr>
+  <h2>Javascript Can Hide HTML Elements</h2>
+  <p>Hiding HTML elements can be done by changing the display style:</p>
+
+  <h3 id="demo3">JavaScript can hide HTML elements.</h3>
+
+  <button type="button" onclick="document.getElementById('demo3').style.display='none'">Click Me!</button>
+
+  <hr>
+  <h2>Javascript Can Show HTML Elements</h2>
+  <p>Showing hidden HTML elements can also be done by changing the display style:</p>
+
+  <p id="demo4" style="display:none">Hello JavaScript!</p>
+
+  <button type="button" onclick="document.getElementById('demo4').style.display='block'">Click Me!</button>
+
+  <hr>
+  <a href="https://www.w3schools.com/js/js_intro.asp">w3schools JavaScript Introduction</a>
+</body>
+</html>
