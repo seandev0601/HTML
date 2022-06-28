@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaning HTML</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="HTML tutorials">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/js/" target="_blank">
+  <style>
+    p { color: gray; font-size:18px;}
+    pre { color: gray; font-size:18px;}
+    h1 {
+      color: black;
+    } 
+    code { color: red;
+    }
+    strong { color: red; }
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+      padding: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+  </style>
+  <!-- <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico"> -->
+</head>
+<body>
+
+  <h1>JavaScript Output</h1>
+  <h2>JavaScript Display Possibilities</h2>
+  <p>JavaScript can "display" data in different ways:</p>
+  <ul>
+    <li>Writing into an HTML element, using <strong>innerHTML</strong>.</li>
+    <li>Writing into the HTML output using <strong>document.write()</strong>.</li>
+    <li>Writing into an alert box, using <strong>window.alert()</strong>.</li>
+    <li>Writing into the browser console, using <strong>console.log()</strong>.</li>
+  </ul>
+
+  <hr>
+  <h2>Using innerHTML</h2>
+  <pre>To access an HTML element, JavaScript can use the <strong>document.getElementById(id)</strong> method.
+
+The id attribute defines the HTML element. The <strong>innerHTML</strong> property defines the HTML content:
+  </pre>
+
+  <p id="demoInnerHTML"></p>
+
+  <script>
+    document.getElementById("demoInnerHTML").innerHTML = 5 + 6;
+  </script>
+
+
+
+  <hr>
+  <h2>Using document.write()</h2>
+  <pre>For testing purposes, it is convenient to use <strong>document.write():</strong></pre>
+  
+  <script>
+    document.write(5 + 8);
+  </script>
+  <br>
+  <button type="button" onclick="document.write(5 + 9)">Try it</button>
+  
+  <hr>
+  <h2>Using window.alert()</h2>
+  <p>You can use an alert box to display data:</p>
+
+  <script>
+    function alertDemo1() {
+      window.alert(5 + 10);
+    }
+  </script>
+  <button type="button" onclick="alertDemo1()">Demo Alert one</button>
+
+  <script>
+    function alertDemo2() {
+      alert(5 + 11);
+    }
+  </script>
+  <br>
+  <button type="button" onclick="alertDemo2()">Demo Alert two</button>
+  
+  <hr>
+  <h2>Using console.log()</h2>
+  <p>For debugging purposes, you can call the <strong>console.log()</strong> method in the browser to display data.</p>
+
+  <script>
+    function logDemo(){
+      console.log(5 + 12);
+    }
+  </script>
+  <button type="button" onclick="logDemo()">Demo log</button>
+
+  <hr>
+  <h2>JavaScript Print</h2>
+  <pre>
+JavaScript does not have any print object or print methods.
+
+You cannot access output devices from JavaScript.
+
+The only exception is that you can call the <strong>window.print()</strong> method in the browser to print the content of the current window.
+  </pre>
+
+  <button onclick="window.print()">Print this page</button>
+
+  <hr>
+  <a href="https://www.w3schools.com/js/js_output.asp">w3schools JavaScript Output</a>
+</body>
+</html>
