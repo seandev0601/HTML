@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaning HTML</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="HTML tutorials">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/js/" target="_blank">
+  <style>
+    p { color: gray; font-size:18px;}
+    pre { color: gray; font-size:18px;}
+    h1 {
+      color: black;
+    } 
+    code { color: red;
+    }
+    strong { color: red; }
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+      padding: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+  </style>
+
+  <script>
+    function myHeadFunction() {
+      document.getElementById("demoHead").innerHTML = "Paragraph Head changed.";
+    }
+  </script>
+  <!-- <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico"> -->
+</head>
+<body>
+
+  <h1>JavaScript Where To</h1>
+  <h2>The &lt;script&gt; Tag</h2>
+  <pre>
+In HTML, JavaScript code is inserted between &lt;script&gt; and &lt;/script&gt; tags.
+  </pre>
+
+  
+  <p id="demoFirst"></p>
+
+  <script>
+    document.getElementById("demoFirst").innerHTML = "My First JavaScript";
+  </script>
+
+
+  <hr>
+  <h2>JavaScript Functions and Events</h2>
+  <pre>A JavaScript <strong>function</strong> is a block of JavaScript code, that can be executed when "called" for.
+
+For example, a function can be called when an event occurs, like when the user clicks a button.
+  </pre>
+
+
+
+  <hr>
+  <h2>JavaScript in &lt;head&gt; or &lt;body&gt;</h2>
+  <pre>You can place any number of scripts in an HTML document.
+
+Scripts can be placed in the &lt;body&gt;, or in the &lt;head&gt; section of an HTML page, or in both.</pre>
+
+  <hr>
+  <h2>JavaScript in &lt;head&gt;</h2>
+  <p>In this example, a JavaScript <strong>function</strong> is placed in the &lt;head&gt; section of an HTML page.</p>
+
+  <p>The function is invoked (called) when a button is clicked:</p>
+
+
+
+  <p id="demoHead">A Paragraph.</p>
+
+  <button type="button" onclick="myHeadFunction()">Try it</button>
+
+  <hr>
+  <h2>JavaScript in &lt;body&gt;</h2>
+  <p>In this example, a JavaScript <strong>function</strong> is placed in the &lt;body&gt; section of an HTML page.</p>
+
+  <p>The function is invoked (called) when a button is clicked:</p>
+
+  <p id="demoBody">A Paragraph</p>
+  <button type="button" onclick="myBodyFunction()">Try it</button>
+
+  <script>
+    function myBodyFunction() {
+      document.getElementById("demoBody").innerHTML = "Paragraph body changed.";
+    }
+  </script>
+
+  <hr>
+  <h2>External JavaScript</h2>
+  <p>Scripts can also be placed in external files:</p>
+
+  <p id="demoPlaced">A Paragraph</p>
+  <button type="button" onclick="myPlacedFunction()">change</button>
+
+  <script>
+    function myPlacedFunction() {
+      document.getElementById("demoPlaced").innerHTML = "Paragraph changed!!!!";
+    }
+  </script>
+
+  <pre>
+External scripts are practical when the same code is used in many different web pages.
+
+JavaScript files have the file extension .js.
+
+To use an external script, put the name of the script file in the src (source) attribute of a &lt;script&gt; tag:</pre>
+
+  <code>&lt;script src="myScript.js"&gt;&lt;/script&gt;</code>
+
+  <hr>
+  <h2>External JavaScript Advantages</h2>
+  <p>Placing scripts in external files has some advantages:</p>
+  <ul>
+    <li>It separates HTML and code</li>
+    <li>It makes HTML and JavaScript easier to read and maintain</li>
+    <li>Cached JavaScript files can speed up page loads</li>
+  </ul>
+
+  <p>To add several script files to one page  - use several script tags:</p>
+
+  <pre>
+  <code>&lt;script src="myScript1.js"&gt;&lt;/script&gt;</code>
+  <code>&lt;script src="myScript2.js"&gt;&lt;/script&gt;</code>
+  </pre>
+
+  <hr>
+  <h2>External References</h2>
+  <p>An external script can be referenced in 3 different ways:</p>
+  <ul>
+    <li>With a full URL (a full web address)</li>
+    <li>With a file path (like /js/)</li>
+    <li>Without any path</li>
+  </ul>
+
+  <p>This example uses a full URL to link to myScript.js:</p>
+
+  <pre>
+    <code>&lt;script src="https://www.w3schools.com/js/myScript.js"&gt;&lt;/script&gt;</code>
+    <code>&lt;script src="/js/myScript.js"&gt;&lt;/script&gt;</code>
+    <code>&lt;script src="myScript.js"&gt;&lt;/script&gt;</code>
+  </pre>
+  
+
+  <p id="demo">A Paragraph.</p>
+
+  <button type="button" onclick="myFunction()">Click Me</button>
+  <script src="https://www.w3schools.com/js/myScript.js"></script>
+
+  <hr>
+  <a href="https://www.w3schools.com/js/js_whereto.asp">w3schools JavaScript Where To</a>
+</body>
+</html>
