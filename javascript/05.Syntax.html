@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaning JavaScript</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="JavaScript tutorials">
+  <meta name="keywords" content="JavaScript">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/js/" target="_blank">
+  <style>
+    p { color: gray; font-size:18px;}
+    pre { color: gray; font-size:18px;}
+    h1 {
+      color: black;
+    } 
+    code { color: red;
+    }
+    strong { color: red; }
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+      padding: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+  </style>
+  <!-- <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico"> -->
+</head>
+<body>
+
+  <h1>JavaScript Syntax</h1>
+  <h2>JavaScript Values</h2>
+  <pre>
+he JavaScript syntax defines two types of values:
+<ul>
+  <li>Fixed values</li>
+  <li>Variable values</li>
+</ul>
+Fixed values are called Literals.
+
+Variable values are called Variables.
+  </pre>
+
+
+  <hr>
+
+  <h2>JavaScript Literals</h2>
+  <p>The two most important syntax rules for fixed values are:</p>
+  <h3>1.Numbers are written with or without decimals</h3>
+  <h3>2.Strings are text, written within double or single quotes</h3>
+  
+
+  <hr>
+
+  <h2>JavaScript Variables</h2>
+  <pre>
+In a programming language, variables are used to store data values.
+
+JavaScript uses the keywords <strong>var, let and const</strong> to declare variables.
+
+An equal sign is used to assign values to variables.
+
+In this example, x is defined as a variable. Then, x is assigned (given) the value 6:
+<code>let x;</code>
+<code>x = 6;</code>
+  </pre>
+  <p id="demoV"></p>
+
+  <script>
+    let x;
+    x = 6;
+    document.getElementById("demoV").innerHTML = x;
+  </script>
+  
+
+  <hr>
+
+  <h2>JavaScript Operators</h2>
+  <p>JavaScript uses arithmetic operators(<code>+ - * /</code>) to compute values:</p>
+  <code>(5 + 6) * 10</code>
+  <p id="demoO"></p>
+
+  <script>
+    document.getElementById("demoO").innerHTML = (5 + 6) * 10;
+  </script>
+
+  <p>JavaScript uses an assignment operator ( = ) to assign values to variables:</p>
+
+  <pre>
+  <code>let x, y;</code>
+  <code>x = 5;</code>
+  <code>y = 6;</code>
+  </pre>
+
+  <p id="demoO1"></p>
+  <p id="demoOy"></p>
+
+  <script>
+    let dx, dy;
+    dx = 5;
+    dy = 6;
+    document.getElementById("demoO1").innerHTML = dx;
+    document.getElementById("demoOy").innerHTML = dy;
+  </script>
+
+
+
+  <hr>
+
+  <h2>JavaScript Expressions</h2>
+  <pre>
+An expression is a combination of values, variables, and operators, which computes to a value.
+
+The computation is called an evaluation.
+
+For example, 5 * 10 evaluates to 50:
+  </pre>
+
+  <code>5 * 10</code>
+  <h4 id="demoE1"></h4>
+
+  <script>
+    document.getElementById("demoE1").innerHTML = 5 * 10;
+  </script>
+  
+  <p>Expressions can also contain variable values:</p>
+  <code>let x = 5;</code>
+  <br>
+  <code>x * 10;</code>
+  <h4 id="demoE2"></h4>
+
+  <script>
+    let ex = 5;
+    document.getElementById("demoE2").innerHTML = ex * 10;
+  </script>
+
+  <pre>
+The values can be of various types, such as numbers and strings.
+
+For example, "John" + " " + "Doe", evaluates to "John Doe":
+  </pre>
+  <code>"John" + " " + "Doe"</code>
+  <h4 id="demoE3"></h4>
+
+  <script>
+    document.getElementById("demoE3").innerHTML = "John" + " " + "Doe";
+  </script>
+
+  <hr>
+
+  <h2>JavaScript Keywords</h2>
+  <p>JavaScript keywords are used to identify actions to be performed.</p>
+
+  <p>The <strong>let</strong> keyword tells the browser to create variables:</p>
+  <pre>
+<code>let x, y;</code>
+<code>x = 5 + 6;</code>
+<code>y = x * 10;</code>
+  </pre>
+  <h4 id="demoK1"></h4>
+  <h4 id="demoK2"></h4>
+
+  <script>
+    let kx, ky;
+    kx = 5 + 6;
+    ky = kx * 10;
+    document.getElementById("demoK1").innerHTML = kx;
+    document.getElementById("demoK2").innerHTML = ky;
+  </script>
+
+  <p>The var keyword also tells the browser to create variables:</p>
+<pre>
+<code>var x, y;</code>
+<code>x = 5 + 6;</code>
+<code>y = x * 10;</code>
+  </pre>
+  <h4 id="demoK3"></h4>
+  <h4 id="demoK4"></h4>
+
+  <script>
+    var kx2, ky2;
+    kx2 = 5 + 6;
+    ky2 = kx2 * 10;
+    document.getElementById("demoK3").innerHTML = kx2;
+    document.getElementById("demoK4").innerHTML = ky2;
+  </script>
+
+  <hr>
+
+  <h2>JavaScript Comments</h2>
+  <pre>
+Not all JavaScript statements are "executed".
+
+Code after double slashes // or between /* and */ is treated as a comment.
+
+Comments are ignored, and will not be executed:
+  </pre>
+
+  <code>let x = 5; //I will be executed</code>
+  <br>
+  <code>//x = 6; I will NOT be executed</code>
+  
+
+  <hr>
+  <h2>JavaScript Identifiers / Names</h2>
+  <pre>
+Identifiers are JavaScript names.
+
+Identifiers are used to name variables and keywords, and functions.
+
+The rules for legal names are the same in most programming languages.
+
+A JavaScript name must begin with:
+
+<ul>
+  <li>A letter (A-Z or a-z)</li>
+  <li>A dollar sign ($)</li>
+  <li>Or an underscore (_)</li>
+</ul>
+Subsequent characters may be letters, digits, underscores, or dollar signs.
+  </pre>
+  
+
+  <hr>
+
+  <h2>JavaScript is Case Sensitive</h2>
+  <pre>
+All JavaScript identifiers are case sensitive. 
+
+The variables lastName and lastname, are two different variables:
+  </pre>
+
+  <pre>
+    <code>
+      let lastname, lastName;
+      lastName = "Doe";
+      lastname = "Peterson";
+    </code>
+  </pre>  
+
+  <h4 id="demoC1"></h4>
+  <h4 id="demoC2"></h4>
+
+  <script>
+    let lastname, lastName;
+    lastName = "Doe";
+    lastname = "Peterson";
+    document.getElementById("demoC1").innerHTML = lastName;
+    document.getElementById("demoC2").innerHTML = lastname;
+  </script>
+
+
+  <hr>
+  <h2>JavaScript and Camel Case</h2>
+  <pre>
+Historically, programmers have used different ways of joining multiple words into one variable name:
+
+<b>Hyphens</b>:
+
+first-name, last-name, master-card, inter-city.
+
+Hyphens are not allowed in JavaScript. They are reserved for subtractions.
+
+<b>Underscore</b>:
+
+first_name, last_name, master_card, inter_city.
+
+<b>Upper Camel Case (Pascal Case)</b>:
+
+FirstName, LastName, MasterCard, InterCity.
+
+<b>Lower Camel Case</b>:
+
+JavaScript programmers tend to use camel case that starts with a lowercase letter:
+
+firstName, lastName, masterCard, interCity.
+  </pre>
+  
+
+  <hr>
+  <h2>JavaScript Character Set</h2>
+  <pre>
+JavaScript uses the Unicode character set.
+
+Unicode covers (almost) all the characters, punctuations, and symbols in the world.
+  </pre>
+  
+
+  <hr>
+  <a href="https://www.w3schools.com/js/js_syntax.asp">w3schools JavaScript Syntax</a>
+</body>
+</html>
