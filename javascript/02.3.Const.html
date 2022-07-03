@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaning JavaScript</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="JavaScript tutorials">
+  <meta name="keywords" content="JavaScript">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/js/" target="_blank">
+  <style>
+    p { color: gray; font-size:20px;}
+    b { color: red; font-size:22px; }
+    pre { color: gray; font-size:20px;}
+    h1 {
+      color: black;
+    } 
+    code { color: red; }
+    strong { color: red; }
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+      padding: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .example {
+      background:white;
+      border:4px solid gray;
+      padding: 10px;
+    }
+    
+    .code {
+      width:auto;
+      background-color:#fff;
+      padding:8px 12px;
+      border-left:4px solid #4CAF50;
+      word-wrap:break-word;
+    }
+
+  </style>
+  <!-- <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico"> -->
+</head>
+<body>
+
+  <h1>JavaScript Const</h1>
+  <pre>
+The const keyword was introduced in ES6 (2015).
+
+Variables defined with const cannot be Redeclared.
+
+Variables defined with const cannot be Reassigned.
+
+Variables defined with const have Block Scope.
+  </pre>
+  <h2>Cannot be Reassigned </h2>
+  <p>A const variable cannot be reassigned:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      const PI = 3.141592653589793;<br>
+      PI = 3.14;      // This will give an error<br>
+      PI = PI + 10;   // This will also give an error
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Must be Assigned </h2>
+  <p>JavaScript const variables must be assigned a value when they are declared:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      //Correst <br>
+      const PI = 3.14159265359;
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="code jsHigh">
+      //Incorrect <br>
+      const PI;<br>
+      PI = 3.14159265359;
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>When to use JavaScript const? </h2>
+  <p>As a general rule, always declare a variable with const unless you know that the value will change.</p>
+
+  <p>Use const when you declare:</p>
+  <ul>
+    <li>A new Array</li>
+    <li>A new Object</li>
+    <li>A new Function</li>
+    <li>A new RegExp</li>
+  </ul>
+
+  <hr>
+
+  <h2>Constant Objects and Arrays </h2>
+  <p>The keyword const is a little misleading.</p>
+
+  <p>It does not define a constant value. It defines a constant reference to a value.</p>
+
+  <p>Because of this you can NOT:</p>
+  
+  <ul>
+    <li>Reassign a constant value</li>
+    <li>Reassign a constant array</li>
+    <li>Reassign a constant object</li>
+  </ul>
+
+  <p>But you CAN:</p>
+
+  <ul>
+    <li>Change the elements of constant array</li>
+    <li>Change the properties of constant object</li>
+  </ul>
+
+  <hr>
+
+  <h2>Constant Arrays </h2>
+  <p>You can change the elements of a constant array:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      // You can create a constant array:<br>
+      const cars = ["Saab", "Volvo", "BMW"];<br>
+      <br>
+      // You can change an element:<br>
+      cars[0] = "Toyota";<br>
+      <br>
+      // You can add an element:<br>
+      cars.push("Audi");         
+    </div>
+  </div>
+
+  <p>But you can NOT reassign the array:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      const cars = ["Saab", "Volvo", "BMW"];<br>
+      <br>
+      cars = ["Toyota", "Volvo", "Audi"];    // ERROR
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>Constant Objects </h2>
+  <h4>You can change the properties of a constant object:</h4>
+  <div class="example">
+    <div class="code jsHigh">
+      // You can create a const object:<br>
+      const car = {type:"Fiat", model:"500", color:"white"};<br>
+      <br>
+      // You can change a property:<br>
+      car.color = "red";<br>
+      <br>
+      // You can add a property:<br>
+      car.owner = "Johnson";
+    </div>
+  </div>
+
+  <h4>But you can NOT reassign the object:</h4>
+  <div class="example">
+    <div class="code jsHigh">
+      const car = {type:"Fiat", model:"500", color:"white"};<br>
+      <br>
+      car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR<br>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Browser Support </h2>
+  <p>The const keyword is not supported in Internet Explorer 10 or earlier.</p>
+
+  <p>The following table defines the first browser versions with full support for the const keyword:</p>
+  
+  <table>
+    <tr>
+      <td>
+        Chrome 49
+      </td>
+      <td>
+        Mar, 2016
+      </td>
+    </tr>
+    <tr>
+      <td>
+        IE 11 / Edge
+      </td>
+      <td>
+        Oct, 2013
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Firefox 36
+      </td>
+      <td>
+        Feb, 2015
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Safari 10
+      </td>
+      <td>
+        Sep, 2016
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Opera 36
+      </td>
+      <td>
+        Mar, 2016
+      </td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <h2>Block Scope </h2>
+  <p>Declaring a variable with const is similar to let when it comes to Block Scope.</p>
+
+  <p>The x declared in the block, in this example, is not the same as the x declared outside the block:</p>
+  
+  <div class="example">
+    <div class="code jsHigh">
+      const x = 10;<br>
+      // Here x is 10<br>
+      <br>
+      {<br>
+      const x = 2;<br>
+      // Here x is 2<br>
+      }<br>
+      <br>
+      // Here x is 10
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>Redeclaring </h2>
+  <p>Redeclaring a JavaScript var variable is allowed anywhere in a program:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      var x = 2;     // Allowed<br>
+      var x = 3;     // Allowed<br>
+      x = 4;         // Allowed
+    </div>
+  </div>
+
+  <p>Redeclaring an existing var or let variable to const, in the same scope, is not allowed:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      var x = 2;     // Allowed<br>
+      const x = 2;   // Not allowed<br>
+      <br>
+      {<br>
+      let x = 2;     // Allowed<br>
+      const x = 2;   // Not allowed<br>
+      }<br>
+      <br>
+      {<br>
+      const x = 2;   // Allowed<br>
+      const x = 2;   // Not allowed<br>
+      }
+    </div>
+  </div>
+
+  <p>Reassigning an existing const variable, in the same scope, is not allowed:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      const x = 2;     // Allowed<br>
+      x = 2;           // Not allowed<br>
+      var x = 2;       // Not allowed<br>
+      let x = 2;       // Not allowed<br>
+      const x = 2;     // Not allowed<br>
+      <br>
+      {<br>
+        const x = 2;   // Allowed<br>
+        x = 2;         // Not allowed<br>
+        var x = 2;     // Not allowed<br>
+        let x = 2;     // Not allowed<br>
+        const x = 2;   // Not allowed<br>
+      }
+    </div>
+  </div>
+
+  <p>Redeclaring a variable with const, in another scope, or in another block, is allowed:</p>
+
+  <div class="example">
+    <div class="code jsHigh">
+      const x = 2;       // Allowed<br>
+      <br>
+      {<br>
+        const x = 3;   // Allowed<br>
+      }<br>
+      <br>
+      {<br>
+        const x = 4;   // Allowed<br>
+      }
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>Const Hoisting </h2>
+  <p>Variables defined with var are hoisted to the top and can be initialized at any time.</p>
+
+  <p>Meaning: You can use the variable before it is declared:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      //This is OK:<br>
+      carName = "Volvo";<br>
+      var carName;
+    </div>
+  </div>
+
+  <hr>
+  <a href="https://www.w3schools.com/js/js_const.asp">w3schools JavaScript Const</a>
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+    w3CodeColor();
+  </script>
+</body>
+</html>

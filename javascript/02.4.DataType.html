@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaning JavaScript</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="JavaScript tutorials">
+  <meta name="keywords" content="JavaScript">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/js/" target="_blank">
+  <style>
+    p { color: gray; font-size:20px;}
+    b { color: red; font-size:22px; }
+    pre { color: gray; font-size:20px;}
+    h1 {
+      color: black;
+    } 
+    code { color: red; }
+    strong { color: red; }
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+      padding: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .example {
+      background:white;
+      border:4px solid gray;
+      padding: 10px;
+    }
+    
+    .code {
+      width:auto;
+      background-color:#fff;
+      padding:8px 12px;
+      border-left:4px solid #4CAF50;
+      word-wrap:break-word;
+    }
+
+  </style>
+  <!-- <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico"> -->
+</head>
+<body>
+
+  <h1>JavaScript Data Types</h1>
+  <h2>The Concept of Data Types </h2>
+  <p>In programming, data types is an important concept.</p>
+  <p>To be able to operate on variables, it is important to know something about the type.</p>
+
+  <p>JavaScript evaluates expressions <b>from left to right</b>. Different sequences can produce <b>different results</b>:</p>
+
+  <div class="example">
+    <div class="code jsHigh">
+      let x = 16 + 4 + "Volvo";<br>
+      //Result: 20Volvo
+    </div>
+  </div>
+  <br>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = "Volvo" + 16 + 4;<br>
+      //Result: Volvo164
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>JavaScript Types are Dynamic</h2>
+  <p>JavaScript has dynamic types. This means that the same variable can be used to hold different data types:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x;           // Now x is undefined<br>
+      x = 5;           // Now x is a Number<br>
+      x = "John";      // Now x is a String
+    </div>
+  </div>
+  
+
+  <hr>
+
+  <h2>JavaScript String</h2>
+  <p>A string (or a text string) is a series of characters like "John Doe".</p>
+
+  <p>Strings are written with quotes. You can use single or double quotes:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let carName1 = "Volvo XC60";   // Using double quotes<br>
+      let carName2 = 'Volvo XC60';   // Using single quotes
+    </div>
+  </div>
+  <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let answer1 = "It's alright";             // Single quote inside double quotes<br>
+    let answer2 = "He is called 'Johnny'";    // Single quotes inside double quotes<br>
+    let answer3 = 'He is called "Johnny"';    // Double quotes inside single quotes
+
+    </div>
+  </div>
+  
+
+  <hr>
+
+  <h2>JavaScript Numbers</h2>
+  <p>JavaScript has only one type of numbers.</p>
+
+  <p>Numbers can be written with, or without decimals:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x1 = 34.00;     // Written with decimals<br>
+      let x2 = 34;        // Written without decimals
+    </div>
+  </div>
+  <p>Extra large or extra small numbers can be written with scientific (exponential) notation:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let y = 123e5;      // 12300000<br>
+      let z = 123e-5;     // 0.00123
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>JavaScript Booleans</h2>
+  <p>Booleans can only have two values: true or false.</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = 5;<br>
+      let y = 5;<br>
+      let z = 6;<br>
+      (x == y)  //Returns true<br>
+      (x == z)  //Returns false
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>JavaScript Arrays</h2>
+  <p>JavaScript arrays are written with square brackets.</p>
+
+  <p>Array items are separated by commas.</p>
+
+  <p>The following code declares (creates) an array called cars, containing three items (car names):</p>
+  <div class="example">
+    <div class="code jsHigh">
+      const cars = ["Saab", "Volvo", "BMW"];
+    </div>
+  </div>
+  
+
+  <hr>
+
+  <h2>JavaScript Objects</h2>
+  <p>JavaScript objects are written with curly braces {}.</p>
+
+  <p>Object properties are written as name:value pairs, separated by commas.</p>
+  <div class="example">
+    <div class="code jsHigh">
+      const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>The typeof Operator </h2>
+  <p>You can use the JavaScript typeof operator to find the type of a JavaScript variable.</p>
+
+  <p>The typeof operator returns the type of a variable or an expression:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      typeof ""             // Returns "string"<br>
+      typeof "John"         // Returns "string"<br>
+      typeof "John Doe"     // Returns "string"
+    </div>
+  </div>
+  <br>
+  <div class="example">
+    <div class="code jsHigh">
+      typeof 0              // Returns "number"<br>
+      typeof 314            // Returns "number"<br>
+      typeof 3.14           // Returns "number"<br>
+      typeof (3)            // Returns "number"<br>
+      typeof (3 + 4)        // Returns "number"
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Undefined</h2>
+  <p>In JavaScript, a variable without a value, has the value undefined. The type is also undefined.</p>  
+  <div class="example">
+    <div class="code jsHigh">
+      let car;  // Value is undefined, type is undefined
+    </div>
+  </div>
+
+  <p>Any variable can be emptied, by setting the value to undefined. The type will also be undefined.</p>
+  <div class="example">
+    <div class="code jsHigh">
+      car = undefined;   // Value is undefined, type is undefined
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Empty Values</h2>
+  <p>An empty value has nothing to do with undefined.</p>
+
+  <p>An empty string has both a legal value and a type.</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let car = "";    // The value is "", the typeof is "string"
+    </div>
+  </div>
+
+  <hr>
+  <a href="https://www.w3schools.com/js/js_datatypes.asp">w3schools JavaScript Data Types</a>
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+    w3CodeColor();
+  </script>
+</body>
+</html>

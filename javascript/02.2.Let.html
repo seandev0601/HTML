@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaning JavaScript</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="JavaScript tutorials">
+  <meta name="keywords" content="JavaScript">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/js/" target="_blank">
+  <style>
+    p { color: gray; font-size:20px;}
+    b { color: red; font-size:22px; }
+    pre { color: gray; font-size:20px;}
+    h1 {
+      color: black;
+    } 
+    code { color: red; }
+    strong { color: red; }
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+      padding: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .example {
+      background:white;
+      border:4px solid gray;
+      padding: 10px;
+    }
+    
+    .code {
+      width:auto;
+      background-color:#fff;
+      padding:8px 12px;
+      border-left:4px solid #4CAF50;
+      word-wrap:break-word;
+    }
+
+  </style>
+  <!-- <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico"> -->
+</head>
+<body>
+
+  <h1>JavaScript let</h1>
+  <pre>
+The let keyword was introduced in ES6 (2015).
+
+Variables defined with let cannot be Redeclared.
+
+Variables defined with let must be Declared before use.
+
+Variables defined with let have Block Scope.
+  </pre>
+
+  <h2>Cannot be Redeclared </h2>
+  
+  <p>Variables defined with <b>let cannot be redeclared</b>.</p>
+
+  <p>You cannot accidentally redeclare a variable.</p>
+
+  <h3>With let you can not do this:</h3>
+
+  <div class="example">
+    <div class="code jsHigh">
+      let x = "John Doe";<br>
+      let x = 0;<br>
+      //SynataxError: 'x' has already been declared
+    </div>
+  </div>
+
+  <h3>With var you can:</h3>
+  <div class="example">
+    <div class="code jsHigh">
+      var x = "John Doe";<br>
+      var x = 0;
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Block Scope </h2>
+  <pre>
+Before ES6 (2015), JavaScript had only <b>Global Scope and Function Scope</b>.
+
+ES6 introduced two important new JavaScript keywords: <b>let and const</b>.
+
+These two keywords provide Block Scope in JavaScript.
+
+Variables declared <b>inside a { } block</b> cannot be accessed from outside the block:
+  </pre>
+
+  <div class="example">
+    <div class="code jsHigh">
+      {<br>
+        let x = 2;<br>
+      }<br>
+      // x can NOT be used here
+    </div>
+  </div>
+
+  <p>Variables declared with the var keyword can NOT have block scope.</p>
+
+  <p>Variables declared inside a { } block can be accessed from outside the block.</p>
+  <div class="example">
+    <div class="code jsHigh">
+      {<br>
+        var x = 2;<br>
+      }<br>
+      // x CAN be used here
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>Redeclaring Variables </h2>
+  <p>Redeclaring a variable using the var keyword can impose problems.</p>
+
+  <p>Redeclaring a variable inside a block will also redeclare the variable outside the block:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      var x = 10;<br>
+      // Here x is 10<br>
+      <br>
+      {<br>
+      var x = 2;<br>
+      // Here x is 2<br>
+      }<br>
+      <br>
+      // Here x is 2<br>
+    </div>
+  </div>
+
+  <p>Redeclaring a variable using the let keyword can solve this problem.</p>
+
+  <p>Redeclaring a variable inside a block will not redeclare the variable outside the block:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = 10;<br>
+      // Here x is 10<br>
+      <br>
+      {<br>
+      let x = 2;<br>
+      // Here x is 2<br>
+      }<br>
+      <br>
+      // Here x is 10<br>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Browser Support </h2>
+  <p>The let keyword is not fully supported in Internet Explorer 11 or earlier.</p>
+
+  <p>The following table defines the first browser versions with full support for the let keyword:</p>
+
+  <ul>
+    <li>Chrome 49 - Mar, 2016</li>
+    <li>Edge 12 - Jul, 2015</li>
+    <li>Firefox 44 - Jan, 2015</li>
+    <li>Safari 11 - Sep, 2017</li>
+    <li>Opera 36 - Mar, 2016</li>
+  </ul>
+  
+
+  <hr>
+
+  <h2>Redeclaring </h2>
+  <h4>Redeclaring a JavaScript variable with var is allowed anywhere in a program:</h4>
+  <div class="example">
+    <div class="code jsHigh">
+      var x = 2;<br>
+      // Now x is 2<br>
+      <br>
+      var x = 3;<br>
+      // Now x is 3
+    </div>
+  </div>
+
+  <h4>With let, redeclaring a variable in the same block is NOT allowed:</h4>
+  <div class="example">
+    <div class="code jsHigh">
+      var x = 2;    // Allowed<br>
+      let x = 3;    // Not allowed<br>
+      <br>
+      {<br>
+      let x = 2;    // Allowed<br>
+      let x = 3     // Not allowed<br>
+      }<br>
+      <br>
+      {<br>
+      let x = 2;    // Allowed<br>
+      var x = 3     // Not allowed<br>
+      }<br>
+    </div>
+  </div>
+
+  <h4>Redeclaring a variable with let, in another block, IS allowed:</h4>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = 2;  // Allowed<br>
+      <br>
+      {<br>
+      let x = 3;  // Allowed<br>
+      }<br>
+      <br>
+      {<br>
+      lext x = 4; // Allowed<br>
+      }<br>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Let Hoisting </h2>
+  <p>Variables defined with var are hoisted to the top and can be initialized at any time.</p>
+
+  <p>Meaning: You can use the variable before it is declared:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      //This is OK:<br>
+      carName = "Volvo";<br>
+      var carName;
+    </div>
+  </div>
+
+  <hr>
+  <a href="https://www.w3schools.com/js/js_let.asp">w3schools Let </a>
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+    w3CodeColor();
+  </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaning JavaScript</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  
+  <meta charset="UTF-8">
+  <meta name="description" content="JavaScript tutorials">
+  <meta name="keywords" content="JavaScript">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/js/" target="_blank">
+  <style>
+    p { color: gray; font-size:18px;}
+    b { color: red; font-size:20px; }
+    pre { color: gray; font-size:18px;}
+    h1 {
+      color: black;
+    } 
+    code { color: red;
+    }
+    strong { color: red; }
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+      padding: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    .example {
+      background:white;
+      border:4px solid gray;
+      padding: 10px;
+    }
+    
+    .code {
+      width:auto;
+      background-color:#fff;
+      padding:8px 12px;
+      border-left:4px solid #4CAF50;
+      word-wrap:break-word;
+    }
+
+  </style>
+  
+  <!-- <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico"> -->
+</head>
+<body>
+
+  <h1>JavaScript Variables</h1>
+  <h2>What are Variables?</h2>
+  <b>Variables are containers for storing data (storing data values).</b>
+  <br>
+  <br>
+
+  <p>In this example, x, y, and z, are variables, declared with the <strong>var</strong> keyword:
+  </p>
+  
+  <div class="example">
+    <div class="code jsHigh">
+      var x = 5;<br>
+      var y = 6;<br>
+      var z = x + y;
+    </div>
+  </div>
+
+  <p>In this example, x, y, and z, are variables, declared with the <strong>let</strong> keyword:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = 5;<br>
+      let y = 6;<br>
+      let z = x + y;
+    </div>
+  </div>
+
+
+  <p>In this example, x, y, and z, are undeciared variables</p>
+  <div class="example">
+    <div class="code jsHigh">
+      x = 5;<br>
+      y = 6;<br>
+      z = x + y;
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>When to Use JavaScript var?</h2>
+  <pre>
+    Always declare JavaScript variables with var,let, orconst.
+
+    The var keyword is used in all JavaScript code from 1995 to 2015.
+
+    The let and const keywords were added to JavaScript in 2015.
+
+    If you want your code to run in older browser, you must use var.
+  </pre>
+
+  <hr>
+
+  <h2>When to Use JavaScript const?</h2>
+  <p>If you want a general rule: always declare variables with <b>const</b>.</p>
+
+  <p>If you think the value of the variable can change, use <b>let</b>.</p>
+
+  <p>In this example, price1, price2, and total, are variables:</p>
+
+  <p>The two variables price1 and price2 are declared with the const keyword.</p>
+
+  <p>These are <b>constant values and cannot be changed</b>.</p>
+
+  <p>The variable total is <b>declared with the let keyword</b>.</p>
+
+  <p>This is a value that <b>can be changed</b>.</p>
+
+  <div class="example">
+    <div class="code jsHigh">
+      const price1 = 5;<br>
+      const price2 = 6;<br>
+      let total = price1 + price2;
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>Just Like Algebra</h2>
+  <p>Just like in algebra, variables hold values:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = 5;<br>
+      let y = 6;
+    </div>
+  </div>
+
+  <p>Just like in algebra, variables are used in expressions:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let z = x + y;
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>JavaScript Identifiers</h2>
+  <pre>
+    All JavaScript variables must be identified with unique names.
+
+    These unique names are called identifiers.
+
+    Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+    The general rules for constructing names for variables (unique identifiers) are:
+    <ul>
+      <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+      <li>Names must begin with a letter</li>
+      <li>Names can also begin with $ and _ (but we will not use it in this tutorial)</li>
+      <li>Names are case sensitive (y and Y are different variables)</li>
+      <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+    </ul>
+
+  </pre>
+
+
+  <hr>
+
+  <h2>The Assignment Operator</h2>
+  <p>In JavaScript, the equal sign <b>(=)</b> is an "assignment" operator, not an "equal to" operator.</p>
+
+  <p>This is different from algebra. The following does not make sense in algebra:</p>
+
+  <div class="example">
+    <div class="code jsHigh">
+      x = x + 5;
+    </div>
+  </div>
+
+  <p>In JavaScript, however, it makes perfect sense: it assigns the value of x + 5 to x.</p>
+
+  <p>(It calculates the value of x + 5 and puts the result into x. The value of x is incremented by 5.)</p>
+
+  <hr>
+
+  <h2>JavaScript Data Types</h2>
+  <pre>
+    JavaScript variables can hold numbers like 100 and text values like "John Doe".
+
+    In programming, <b>text</b> values are called <b>text strings</b>.
+
+    JavaScript can handle many types of data, but for now, just think of <b>numbers</b> and <b>strings</b>.
+
+    Strings are written inside <b>double or single quotes</b>. Numbers are written <b>without quotes</b>.
+
+    <b>If you put a number in quotes, it will be treated as a text string</b>.
+  </pre>
+
+  <div class="example">
+    <div class="code jsHigh">
+      const pi = 3.14;<br>
+      let person = "John Doe";<br>
+      let answer = 'Yes I am!';
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>Declaring a JavaScript Variable</h2>
+  <p>Creating a variable in JavaScript is called "declaring" a variable.</p>
+
+  <p>You declare a JavaScript variable with the var or the let keyword:</p>  
+  <div class="example">
+    <div class="code jsHigh">
+      var carName;<br>
+      //or<br>
+      let carname;
+    </div>
+  </div>
+
+
+  <p>After the declaration, the variable has no value (technically it is undefined).</p>
+
+  <p>To assign a value to the variable, use the equal sign:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      carName = "Volvo";
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>One Statement, Many Variables</h2>
+  <p>You can <b>declare many variables</b> in one statement.</p>
+
+  <p>Start the statement with let and separate the variables by <b>comma</b>:</p>
+  <code>let persion = "John Doe", carName = "Volvo", price = 200;</code>
+  <p>A declaration can span multiple lines:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let person = "John Doe",<br>
+      carName = "Volvo",<br>
+      price = 200;
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Value = undefined</h2>
+  <pre>
+    In computer programs, variables are often declared <b>without a value</b>. The value can be something that has to be calculated, or something that will be provided later, like user input.
+
+    A variable declared without a value will have the value <b>undefined</b>.
+
+    The variable carName will have the value <b>undefined</b> after the execution of this statement:
+  </pre>
+  <div class="example">
+    <div class="code jsHigh">
+      let carName;
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>Re-Declaring JavaScript Variables</h2>
+  <p>If you re-declare a JavaScript variable declared with <b>var</b>, it will not lose its value.</p>
+
+  <p>The variable carName will <b>still have the value "Volvo"</b> after the execution of these statements:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      var carName = "Volvo";<br>
+      var carName;
+    </div>
+  </div>
+
+
+  <hr>
+
+  <h2>JavaScript Arithmetic</h2>
+  <p>As with algebra, you can do arithmetic with JavaScript variables, using operators like <b>=</b> and <b>+</b>:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = 5 + 2 + 3;
+    </div>
+  </div>
+
+  <p>You can also add strings, but strings will be concatenated:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = "John" + " " + "Doe";
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>JavaScript Dollar Sign $</h2>
+  <p>Since JavaScript treats a <b>dollar sign</b> as a letter, identifiers containing <b>$</b> are valid variable names:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let $ = "Hello World";<br>
+      let $$$ = 2;<br>
+      let $myMoney = 5;
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>JavaScript Underscore (_)</h2>
+  <p>Since JavaScript treats <b>underscore</b> as a letter, identifiers containing <b>_</b> are valid variable names:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let _lastName = "Hello World";<br>
+      let _x = 2;<br>
+      let _100 = 5;
+    </div>
+  </div>
+
+  <hr>
+
+  <a href="https://www.w3schools.com/js/js_variables.asp">w3schools JavaScript Variables</a>
+
+
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+    w3CodeColor();
+  </script>
+</body>
+</html>
