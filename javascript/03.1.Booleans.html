@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaning JavaScript</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="JavaScript tutorials">
+  <meta name="keywords" content="JavaScript">
+  <meta name="author" content="Sean">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="https://www.w3schools.com/js/" target="_blank">
+  <style>
+    p { color: gray; font-size:20px;}
+    b { color: red; font-size:22px; }
+    pre { color: gray; font-size:20px;}
+    h1 {
+      color: black;
+    } 
+    code { color: red; }
+    strong { color: red; }
+    table, th, td {
+      border:1px solid black;
+    }
+    th, td {
+      padding: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .example {
+      background:white;
+      border:4px solid gray;
+      padding: 10px;
+    }
+    
+    .code {
+      width:auto;
+      background-color:#fff;
+      padding:8px 12px;
+      border-left:4px solid #4CAF50;
+      word-wrap:break-word;
+    }
+
+  </style>
+  <!-- <link rel="icon" type="https://www.w3schools.com/html/image/x-icon" href="https://www.w3schools.com/html/images/favicon.ico"> -->
+</head>
+<body>
+
+  <h1>JavaScript Booleans</h1>
+  <h2>Boolean Values </h2>
+<pre>
+Very often, in programming, you will need a data type that can only have one of two values, like
+<ul>
+  <li>YES / NO</li>
+  <li>ON / OFF</li>
+  <li>TRUE / FALSE</li>
+</ul>
+For this, JavaScript has a Boolean data type. It can only take the values true or false.
+</pre>
+
+
+  <hr>
+
+  <h2>The Boolean() Function</h2>
+  <p>You can use the <strong>Boolean()</strong> function to find out if an expression (or a variable) is true:</p>
+  
+  <div class="example">
+    <div class="code jsHigh">
+      Boolean(10>9)<br>
+      //Result: true
+    </div>
+  </div>
+
+  <p>Or even easier:</p>
+
+  <div class="example">
+    <div class="code jsHigh">
+      (10 > 9)  //true<br>
+      10 > 9  //true
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Comparisons and Conditions </h2>
+<pre>
+The chapter JS Comparisons gives a full overview of comparison operators.
+
+The chapter JS Conditions gives a full overview of conditional statements.
+
+Here are some examples:
+</pre>
+  <table>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>==</td>
+      <td>equal to</td>
+      <td>if(day == "Monday")</td>
+    </tr>
+    <tr>
+      <td>&lt;>&gt;</td>
+      <td>greater than</td>
+      <td>if(salary > 9000)</td>
+    </tr>
+    <tr>
+      <td>&lt;<&gt;</td>
+      <td>less than</td>
+      <td>if(age < 18)</td>
+    </tr>
+  </table>
+  
+
+  <hr>
+
+  <h2>Everything With a "Value" is True </h2>
+  <div class="example">
+    <div class="code jsHigh">
+      00<br>
+      3.14<br>
+      -15<br>
+      "Hello"<br>
+      "false"<br>
+      7 + 1 + 3.14<br>
+      //Boolean(value) return: true
+    </div>
+  </div>
+  
+
+  <hr>
+
+  <h2>Everything Without a "Value" is False </h2>
+  <p>The Boolean value of 0 (zero) is false:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = 0;<br>
+      Boolean(x);<br>
+      //Result: false
+    </div>
+  </div>
+
+  <p>The Boolean value of -0 (minus zero) is false:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = -0;<br>
+      Boolean(x);<br>
+      //Result: false
+    </div>
+  </div>
+
+  <p>The Boolean value of "" (empty string) is false:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = "";<br>
+      Boolean(x);<br>
+      //Result: false
+    </div>
+  </div>
+
+  <p>The Boolean value of undefined is false:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x;<br>
+      Boolean(x);<br>
+      //Result: false
+    </div>
+  </div>
+  
+  <p>The Boolean value of null is false:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = null;<br>
+      Boolean(x);<br>
+      //Result: false
+    </div>
+  </div>
+
+  <p>The Boolean value of false is (you guessed it) false:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = false;<br>
+      Boolean(x);<br>
+      //Result: false
+    </div>
+  </div>
+
+  <p>The Boolean value of NaN is false:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = 10 / "Hallo";<br>
+      Boolean(x);<br>
+      //Result: false
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>JavaScript Booleans as Objects </h2>
+  <p>Normally JavaScript booleans are primitive values created from literals:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let x = false;
+    </div>
+  </div>
+
+  <p>But booleans can also be defined as objects with the keyword new:</p>
+  <div class="example">
+    <div class="code jsHigh">
+      let y = new Boolean(false);
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="code jsHigh">
+      let x = false;<br>
+      let y = new Boolean(false);<br>
+      // typeof x returns boolean<br>
+      // typeof y returns object
+    </div>
+  </div>
+  
+
+
+  <hr>
+  <a href="https://www.w3schools.com/js/js_booleans.asp">w3schools JavaScript Booleans</a>
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+    w3CodeColor();
+  </script>
+</body>
+</html>
